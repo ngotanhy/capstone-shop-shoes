@@ -153,6 +153,12 @@ window.deleteProd = (id, size) => {
     document.querySelector('#numberItem').innerHTML = `(${cart.totalCount()})`;
 }
 
+//delete All Products in cart.arrProducts
+document.querySelector('#deleteAll').onclick = () => {
+    cart.arrProducts = [];
+    cart.saveProductLocalStorage();
+    document.querySelector('#numberItem').innerHTML = `(${cart.totalCount()})`;
+}
 
 window.onload = function () {
     getAllProducts();
