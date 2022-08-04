@@ -302,3 +302,42 @@ footer {
     }
   }
 }
+
+
+#tableProduct {
+  div {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .name {
+      @include text($text-xl, $text-bold);
+    }
+    .countItem {
+      @include text($text-base, $text-regular);
+    }
+    .price {
+      @include text($text-base, $text-regular);
+    }
+    .totalPrice {
+      @include text($text-base, $text-regular);
+    }
+    .row {
+      text-align: center;
+      button {
+        border: none;
+        outline: none;
+      }
+      span {
+        max-width: 24%;
+      }
+    }
+  }
+  .total {
+    @include text($text-xl, $text-bold);
+    span {
+      @include text($text-xl, $text-regular);
+      color: $text-c1-red;
+    }
+  }
+}
