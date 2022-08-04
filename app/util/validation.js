@@ -10,6 +10,7 @@ export let checkEmpty = (value, selectorError, name)=> {
         return true
     }
 }
+
 //check dinh dang 
 function removeAscent (str) {
     if (str === null || str === undefined) return str;
