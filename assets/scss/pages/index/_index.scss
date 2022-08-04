@@ -1,65 +1,304 @@
+body {
+  position: relative;
+}
 
-.productRelate {
-    margin-top: 55px;
+header {
+  .header-top {
+    background-color: $bg-c1-dark;
     .container {
-      padding-left: 100px;
-      h2 {
-        @include text($text-4xl, $text-regular);
+      color: $text-c2-light;
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        img {
+          width: 100%;
+        }
       }
-      .prodItem {
-        margin-top: 89px;
-        .prodCard {
-          margin-bottom: 47px;
-          .card {
+      .contact {
+        display: flex;
+        align-items: center;
+        .cart {
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+          .btnCart {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
             border: none;
-            width: 350px;
-          height: 400px;
-            background-color: $bg-c2-light;
+            outline: none;
             img {
-              width: 220px;
-              height: 170px;
-              margin: auto;
-            }
-            .name {
-              @include text($text-24xl, $text-light);
-              line-height: 29px;
-              padding-left: 23px;
-            }
-            .shortDes {
-              @include text($text-2xl, $text-light);
-              line-height: 24px;
-              padding-left: 23px;
-              color: $text-c3-light;
-            }
-            .cardFooter {
-              display: flex;
-              align-items: center;
-              a{
-                width: 50%;
-                .buyProd {
-                  width: 100%;
-                  border: none;
-                  height: 64px;
-                  background-color: $bg-c1-brown;
-                  @include text($text-24xl, $text-extraLight);
-                  &:hover{
-                    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.58);
-                  }
-                }
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              &:hover {
+                box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
               }
-              .priceItem {
-                width: 50%;
-                height: 64px;
-                margin: 0;
-                @include text($text-24xl, $text-semiBold);
-                background-color: $bg-c4-light;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            }
+          }
+          span {
+            font-size: $text-3xl;
+            font-weight: $text-light;
+          }
+        }
+      }
+      .login {
+        font-size: $text-base;
+        font-weight: $text-light;
+        text-decoration: none;
+        color: $text-c1-light;
+        margin-right: 20px;
+      }
+      .register {
+        font-size: $text-base;
+        font-weight: $text-light;
+        text-decoration: none;
+        color: $text-c1-light;
+        margin-right: 20px;
+      }
+    }
+  }
+  .header-bottom {
+    .container {
+      padding: 0 30px;
+      .navbar {
+        background-color: $bg-c1-light !important;
+        .nav-item {
+          .nav-link {
+            font-size: $text-2xl;
+            font-weight: $text-regular;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel {
+  .container {
+    background-image: url(../assets/images/bgImage.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    #carouselExampleIndicators {
+      .carousel-indicators {
+        bottom: 60px;
+        li {
+          background-color: black;
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+        }
+      }
+      .carousel-inner {
+        .carousel-item {
+          .carousel-item-right {
+            h3 {
+              @include text($text-4xl, $text-light);
+              margin: 0;
+            }
+            .desc {
+              @include text($text-2xl, $text-light);
+              width: 200px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .buyNow {
+              @include text($text-2xl, $text-light);
+              background-color: $bg-c2-brown;
+              color: $text-c1-light;
+              padding: 13px 35px;
+              border: none;
+              outline: none;
+              &:hover {
+                box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.58);
               }
             }
           }
         }
       }
+      .carousel-control-prev {
+        width: 10%;
+        color: $text-c2-dark;
+        span {
+          i {
+            font-size: 150px;
+            &:hover {
+              color: $text-c1-dark;
+            }
+          }
+        }
+      }
+      .carousel-control-next {
+        width: 10%;
+        color: $text-c2-dark;
+        span {
+          i {
+            font-size: 150px;
+            &:hover {
+              color: $text-c1-dark;
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+.product {
+  margin-top: 55px;
+  .container {
+    padding-left: 100px;
+    h2 {
+      @include text($text-4xl, $text-regular);
+    }
+    .prodItem {
+      margin-top: 89px;
+      .prodCard {
+        margin-bottom: 47px;
+        .card {
+          border: none;
+          width: 334px;
+          height: 369px;
+          background-color: $bg-c2-light;
+          img {
+            width: 220px;
+            height: 156px;
+            margin: auto;
+          }
+          .name {
+            @include text($text-24xl, $text-light);
+            line-height: 29px;
+            padding-left: 23px;
+          }
+          .shortDes {
+            @include text($text-2xl, $text-light);
+            line-height: 24px;
+            padding-left: 23px;
+            color: $text-c3-light;
+          }
+          .cardFooter {
+            display: flex;
+            align-items: center;
+            a {
+              width: 50%;
+              .buyProd {
+                width: 100%;
+                border: none;
+                height: 64px;
+                background-color: $bg-c1-brown;
+                @include text($text-24xl, $text-extraLight);
+                &:hover {
+                  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.58);
+                }
+              }
+            }
+            .priceItem {
+              width: 50%;
+              height: 64px;
+              margin: 0;
+              @include text($text-24xl, $text-semiBold);
+              background-color: $bg-c4-light;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: 106px;
+  .footer-top {
+    padding: 20px 0 10px 0;
+    background-color: $bg-c2-light;
+    .container {
+      padding: 0 15px;
+      h3 {
+        @include text($text-3xl, $text-bold);
+      }
+      ul {
+        text-decoration: none;
+        list-style: none;
+        li {
+          @include text($text-base, $text-light);
+        }
+      }
+      p {
+        @include text($text-base, $text-light);
+      }
+      a {
+        color: $text-c1-red;
+        @include text($text-base, $text-extraLight);
+      }
+      .borderLeft {
+        border-left: 1px solid #cccccc;
+      }
+    }
+  }
+  .footer-bottom {
+    background-color: $bg-c4-light;
+    padding: 10px 0;
+    .container {
+      padding: 0 15px;
+      h3 {
+        @include text($text-3xl, $text-bold);
+      }
+      p {
+        @include text($text-base, $text-light);
+      }
+      a {
+        color: $text-c1-red;
+        @include text($text-base, $text-extraLight);
+      }
+      .borderLeft {
+        border-left: 1px solid #cccccc;
+      }
+    }
+  }
+}
+
+.ontop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: $bg-c1-red;
+  cursor: pointer;
+  border-radius: 10px;
+  &:hover {
+    background: $bg-c2-linear;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.58);
+    color: white;
+    .top {
+      border: none;
+      outline: none;
+      color: white;
+    }
+  }
+  .top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    color: black;
+    i {
+      @include text($text-2xl, $text-bold);
+    }
+    &:hover {
+      color: white;
+    }
+  }
 }

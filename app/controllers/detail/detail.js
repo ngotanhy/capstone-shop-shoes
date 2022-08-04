@@ -98,7 +98,7 @@ let renderRelatedProducts = (product) => {
                 <div class="card">
                     <img src="${prod.image}" alt="">
                     <h2 class="name">${prod.name}</h2>
-                    <p class="shortDes">
+                    <p class="shortDes ">
                         ${prod.shortDescription}
                     </p>
                     <div class="cardFooter">
@@ -174,7 +174,7 @@ document.querySelector('#btnAddToCart').onclick = () => {
     }
     cart.checkSimilarProductInList();
     cart.saveProductLocalStorage();
-    
+
 }
 
 //Show product information on cart
@@ -269,8 +269,8 @@ window.deleteProd = (id, size) => {
 
 
 //delete All Products in cart.arrProducts
-document.querySelector('#deleteAll').onclick=()=>{
-    cart.arrProducts=[];
+document.querySelector('#deleteAll').onclick = () => {
+    cart.arrProducts = [];
     cart.saveProductLocalStorage();
     document.querySelector('#numberItem').innerHTML = `(${cart.totalCount()})`;
 }

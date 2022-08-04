@@ -1,5 +1,6 @@
 import { User } from '../../models/User.js';
 import { checkEmail, checkEmpty, checkPassword, checkNumber, checkName, checkLength } from '../../util/validation.js';
+
 // checked by input radio 
 let inputMale = document.querySelector('#male');
 let inputFemale = document.querySelector('#female');
@@ -92,7 +93,7 @@ let validationError = (user) => {
         //     password: user.password
         // }
         // setTimeout(signIn(userLogIn), 3000);
-         setTimeout(() => location.assign("../../index.html"), 1000);
+        setTimeout(() => location.assign("../../index.html"), 1000);
     } else {
         handleTagDiv();
     }
@@ -139,6 +140,5 @@ let handleTagDiv = () => {
         dp.style.top = 0;
     }
 }
-
 
 
